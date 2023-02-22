@@ -1,91 +1,58 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from 'next/image';
+import SectionHeader from './SectionHeader';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<main className='flex h-full flex-col gap-6 pt-20'>
+			<header className='flex items-center space-x-4'>
+				<div className='avatar'>
+					<div className='mask mask-squircle w-24'>
+						<img src='/images/avatar.jpg' />
+					</div>
+				</div>
+				<div className='text-lg dark:text-white'>
+					<div className='bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-3xl font-bold tracking-wide text-transparent'>
+						Tyrone Cloma
+					</div>
+					<div className='text-sm text-gray-500 dark:text-gray-400'>
+						Full Stack Dev @ NYC
+					</div>
+				</div>
+			</header>
+			<SectionHeader name='About' />
+			<section id='about'>
+				<p className='mb-4'>
+					Hey! I'm Ty. Avid gamer, music fanatic, TypeScript devotee, Rustacean
+					in the making, ever curious mind and lifelong learner.
+				</p>
+				<p className='mb-4'>
+					I'm currently working freelance while searching for a full-time
+					position. My work involves communicating directly with clients and
+					translating design ideas into functional and reusable code.
+				</p>
+				<p>
+					I value accessibility and developer experience, discovering and
+					mastering tools that aid in those are what excites me as a developer.
+				</p>
+			</section>
+			<Image
+				className='h-auto w-full rounded-lg'
+				src='/images/placeholder.jpg'
+				alt='image description'
+				width={1920}
+				height={1080}
+			/>
+			<section id='socials' className='flex justify-between'>
+				<div className='rounded-md border-2 px-14 py-4'>
+					<p className='text-xl font-semibold'>LinkedIn</p>
+				</div>
+				<div className='rounded-md border-2 px-14 py-4'>
+					<p className='text-xl font-semibold'>Github</p>
+				</div>
+				<div className='rounded-md border-2 px-14 py-4'>
+					<p className='text-xl font-semibold'>Resume</p>
+				</div>
+			</section>
+		</main>
+	);
 }
