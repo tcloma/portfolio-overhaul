@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import SectionHeader from './SectionHeader';
+import { FaMoon } from 'react-icons/fa';
+import Container from './Container';
 
 export default function Home() {
 	return (
-		<main className='flex h-full flex-col gap-6 pt-20'>
+		<Container>
 			<header className='flex items-center space-x-4'>
 				<div className='avatar'>
 					<div className='mask mask-squircle w-24'>
@@ -22,8 +24,8 @@ export default function Home() {
 			<SectionHeader name='About' />
 			<section id='about'>
 				<p className='mb-4'>
-					Hey! I'm Ty. Avid gamer, music fanatic, TypeScript devotee, Rustacean
-					in the making, ever curious mind and lifelong learner.
+					Hey! I'm Ty. Avid gamer, music fanatic, TypeScript devotee, up and
+					coming Rustacean, ever curious mind and lifelong learner.
 				</p>
 				<p className='mb-4'>
 					I'm currently working freelance while searching for a full-time
@@ -42,17 +44,6 @@ export default function Home() {
 				width={1920}
 				height={1080}
 			/>
-			<section id='socials' className='flex justify-between'>
-				<div className='rounded-md border-2 px-14 py-4'>
-					<p className='text-xl font-semibold'>LinkedIn</p>
-				</div>
-				<div className='rounded-md border-2 px-14 py-4'>
-					<p className='text-xl font-semibold'>Github</p>
-				</div>
-				<div className='rounded-md border-2 px-14 py-4'>
-					<p className='text-xl font-semibold'>Resume</p>
-				</div>
-			</section>
-		</main>
+		</Container>
 	);
 }

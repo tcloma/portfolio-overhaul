@@ -16,9 +16,11 @@ export default function RootLayout({ children }: Props) {
 	return (
 		<html lang='en' data-theme='dracula'>
 			<head />
-			<body className={`${inter.className} px-[10%] antialiased lg:px-[35%]`}>
-				{children}
+			<body
+				className={`${inter.className} px-[10%] antialiased lg:px-[30%]`}
+			>
 				<MenuBar />
+				{children}
 			</body>
 		</html>
 	);
