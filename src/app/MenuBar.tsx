@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import MenuLink from './MenuLink';
 
