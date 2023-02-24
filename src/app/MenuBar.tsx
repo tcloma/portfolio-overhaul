@@ -1,7 +1,7 @@
 'use client';
 
-import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import MenuLink from './MenuLink';
+import MenuSocials from './MenuSocials';
 
 export default function MenuBar() {
 	return (
@@ -15,17 +15,7 @@ export default function MenuBar() {
 				<MenuLink route='contact' />
 			</ul>
 			<div className='divider divider-horizontal' />
-			<div>
-				<button className='btn-ghost btn rounded-2xl text-3xl'>
-					<FaFilePdf />
-				</button>
-				<button className='btn-ghost btn rounded-2xl text-3xl'>
-					<FaGithub />
-				</button>
-				<button className='btn-ghost btn rounded-2xl text-3xl'>
-					<FaLinkedin />
-				</button>
-			</div>
+			<MenuSocials />
 		</div>
 	);
 }
