@@ -7,7 +7,6 @@ type Props = {
 
 export default function ProjectCard({ data }: Props) {
 
-
 	return (
 		<div className='flex flex-col justify-center items-center border-2 rounded-xl border-neutral'>
 			<figure>
