@@ -2,6 +2,11 @@ import Image from 'next/image';
 import SectionHeader from './SectionHeader';
 import { FaMoon } from 'react-icons/fa';
 import Container from './Container';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Tyrone Cloma | Home',
+};
 
 export default function Home() {
 	return (
@@ -9,7 +14,7 @@ export default function Home() {
 			<header className='flex items-center space-x-4'>
 				<div className='avatar'>
 					<div className='mask mask-squircle w-24'>
-						<img src='/images/avatar.jpg' />
+						<img src='/images/placeholders/avatar.jpg' />
 					</div>
 				</div>
 				<div className='text-lg dark:text-white'>
@@ -39,7 +44,7 @@ export default function Home() {
 			</section>
 			<Image
 				className='h-auto w-full rounded-lg'
-				src='/images/placeholder.jpg'
+				src='/images/placeholders/HDimage.jpg'
 				alt='image description'
 				width={1920}
 				height={1080}

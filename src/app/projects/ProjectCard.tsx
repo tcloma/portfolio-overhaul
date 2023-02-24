@@ -6,18 +6,15 @@ type Props = {
 
 export default function ProjectCard({ data }: Props) {
 	return (
-		<div className='card-compact card w-96 bg-base-100 shadow-xl'>
+		<div className='card bg-base-100 shadow-xl lg:card-side'>
 			<figure>
-				<img
-					src={data.previewLink}
-					alt='Project preview'
-				/>
+				<img src={data.previewLink} className='lg:aspect-square' alt='Album' />
 			</figure>
 			<div className='card-body'>
-				<h2 className='card-title'>Shoes!</h2>
-				<p>If a dog chews shoes whose shoes does he choose?</p>
+				<h2 className='card-title'>New album is released!</h2>
+				<p>Click the button to listen on Spotiwhy app.</p>
 				<div className='card-actions justify-end'>
-					<button className='btn-primary btn'>Buy Now</button>
+					<button className='btn-primary btn'>Listen</button>
 				</div>
 			</div>
 		</div>

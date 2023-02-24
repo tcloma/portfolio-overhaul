@@ -10,16 +10,16 @@ export default function MenuLink({ route }: Props) {
 	const path = usePathname();
 
 	function onPath() {
-		if (isHome && path == '/') return 'bg-neutral';
+		if (isHome && path == '/') return 'bg-primary text-white';
 		if (path == '/' + route) {
-			return 'bg-neutral';
+			return 'bg-primary text-white';
 		} else {
 			return '';
 		}
 	}
 
 	return (
-		<li className={'btn btn-ghost normal-case ' + onPath()}>
+		<li className={'btn-ghost btn normal-case ' + onPath()}>
 			<Link className='capitalize' href={isHome ? '/' : `/${route}`}>
 				{route}
 			</Link>

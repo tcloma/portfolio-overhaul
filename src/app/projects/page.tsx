@@ -11,9 +11,11 @@ export default function page({}) {
 	return (
 		<Container>
 			<SectionHeader name='Projects' />
-			{projectData.map((project) => {
-				return <ProjectCard data={project} />;
-			})}
+			<div className='grid grid-cols-1 w-full'>
+				{projectData.map((project, index) => {
+					return <ProjectCard key={index} data={project} />;
+				})}
+			</div>
 		</Container>
 	);
 }
