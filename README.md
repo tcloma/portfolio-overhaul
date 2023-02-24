@@ -20,5 +20,6 @@
 - [] Dark mode toggle
     - Daylight filter past certain time
 - [x] Time in NYC
+    - Fixed number spacing to avoid text shifting on date update
 - [] Gimmick
     - React three fiber
