@@ -1,5 +1,6 @@
 'use client'
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
 
 interface IFormInputs {
     name: string,
@@ -9,7 +10,7 @@ interface IFormInputs {
 }
 
 export default function ContactForm() {
-    const { handleSubmit, register, formState: { errors } } = useForm();
+    const { handleSubmit, register, formState: { errors } } = useForm<IFormInputs>();
 
     const submitData: SubmitHandler<IFormInputs> = (data) => {
         console.log(data)
@@ -19,28 +20,54 @@ export default function ContactForm() {
         <>
             <form className='flex flex-col justify-center items-center gap-2 w-full' onSubmit={handleSubmit(submitData)}>
                 <div className='flex gap-2 w-full'>
-                    <div>
+                    <div className='w-full'>
                         <input
                             className='input w-full input-bordered'
                             placeholder='Name'
                             type="text"
-                            {...register('name', { required: 'Name is required', maxLength: 50 })}
+                            {...register('name', {
+                                required: 'Name is required',
+
+                            })}
+                        />
+                        <ErrorMessage
+                            errors={errors}
+                            name='name'
+                            render={({ message }) => <p className='ml-2 text-error'>{message}</p>}
+
+                        />
+                    </div>
+                    <div className='w-full'>
+                        <input className='input w-full input-bordered' type="text" placeholder='Email' {...register('email', { required: 'Email is required' })} />
+                        <ErrorMessage
+                            errors={errors}
+                            name='email'
+                            render={({ message }) => <p className='ml-2 text-error'>{message}</p>}
+
                         />
                     </div>
 
-                    <input className='input w-full input-bordered' type="text" placeholder='Email' {...register('email', { required: true })} />
-
                 </div>
-                <input className='input w-full input-bordered' type="text" placeholder='Subject' {...register('subject', { required: true })} />
-                <textarea className='textarea w-full textarea-bordered' placeholder='Message' {...register('message', { required: true })} />
+                <div className='w-full'>
+                    <input className='input w-full input-bordered' type="text" placeholder='Subject' {...register('subject', { required: 'Subject is required' })} />
+                    <ErrorMessage
+                        errors={errors}
+                        name='subject'
+                        render={({ message }) => <p className='ml-2 text-error'>{message}</p>}
+
+                    />
+                </div>
+                <div className='w-full'>
+                    <textarea className='textarea w-full textarea-bordered' placeholder='Message' {...register('message', { required: 'Message is required' })} />
+                    <ErrorMessage
+                        errors={errors}
+                        name='message'
+                        render={({ message }) => <p className='ml-2 text-error'>{message}</p>}
+
+                    />
+                </div>
                 <button type='submit' className='btn w-full btn-secondary'> Submit</button>
             </form>
-            <div>
-                {errors.name?.type === 'required' && <p role="alert">Name is required</p>}
-                {errors.email?.type === 'required' && <p role="alert">Email is required</p>}
-                {errors.subject?.type === 'required' && <p role="alert">Subject is required</p>}
-                {errors.message?.type === 'required' && <p role="alert">Message is required</p>}
-            </div>
         </>
 
     )

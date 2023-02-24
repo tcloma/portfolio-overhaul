@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hookform/error-message': ^2.0.1
   '@next/font': 13.1.6
   '@types/node': 18.14.0
   '@types/react': 18.0.28
@@ -20,6 +21,7 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
+  '@hookform/error-message': 2.0.1_bamyqy2r5urjalaw4du2uschzm
   '@next/font': 13.1.6
   '@types/node': 18.14.0
   '@types/react': 18.0.28
@@ -54,6 +56,18 @@ packages:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
     dev: false
     optional: true
+
+  /@hookform/error-message/2.0.1_bamyqy2r5urjalaw4du2uschzm:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-hook-form: 7.43.2_react@18.2.0
+    dev: false
 
   /@next/env/13.2.0:
     resolution: {integrity: sha512-yv9oaRVa+AxFa27uQOVecS931NrE+GcQSqcL2HaRxL8NunStLtPiyNm/VixvdzfiWLabMz4dXvbXfwCNaECzcw==}
