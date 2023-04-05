@@ -29,8 +29,8 @@ export default function Home() {
 			<SectionHeader name='About' />
 			<section id='about'>
 				<p className='mb-4'>
-					Hey! I'm Ty. Avid gamer, music fanatic, TypeScript devotee, up and
-					coming Rustacean, ever curious mind and lifelong learner.
+					Hey! I'm Ty. An avid gamer, music fanatic, TypeScript devotee,
+					up-and-coming Rustacean, ever-curious mind, and lifelong learner.
 				</p>
 				<p className='mb-4'>
 					I'm currently working freelance while searching for a full-time

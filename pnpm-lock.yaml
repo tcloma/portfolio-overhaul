@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@emailjs/browser': ^3.10.0
   '@hookform/error-message': ^2.0.1
   '@next/font': 13.1.6
   '@types/node': 18.14.0
@@ -21,6 +22,7 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
+  '@emailjs/browser': 3.10.0
   '@hookform/error-message': 2.0.1_bamyqy2r5urjalaw4du2uschzm
   '@next/font': 13.1.6
   '@types/node': 18.14.0
@@ -43,6 +45,11 @@ devDependencies:
   tailwindcss: 3.2.7_postcss@8.4.21
 
 packages:
+
+  /@emailjs/browser/3.10.0:
+    resolution: {integrity: sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /@emotion/is-prop-valid/0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
